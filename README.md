@@ -5,6 +5,12 @@
 [![Python](https://img.shields.io/badge/Python-3.9-blue?logo=python)](https://www.python.org/)
 [![Flask](https://img.shields.io/badge/Framework-Flask-lightgrey?logo=flask)](https://flask.palletsprojects.com/)
 
+
+![GitHub stars](https://img.shields.io/github/stars/KislayaSrivastava/multi-tier-hospital-aws-app?style=social)
+![GitHub forks](https://img.shields.io/github/forks/KislayaSrivastava/multi-tier-hospital-aws-app?style=social)
+![GitHub issues](https://img.shields.io/github/issues/KislayaSrivastava/multi-tier-hospital-aws-app)
+![GitHub last commit](https://img.shields.io/github/last-commit/KislayaSrivastava/multi-tier-hospital-aws-app)
+
 > A production-ready, cloud-native hospital management system built on AWS, demonstrating enterprise-grade architecture patterns and DevOps best practices.
 
 ##  Table of Contents
