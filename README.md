@@ -13,6 +13,19 @@
 
 > A production-ready, cloud-native hospital management system built on AWS, demonstrating enterprise-grade architecture patterns and DevOps best practices.
 
+## Live Demo
+
+**Status:** Live and Running
+  - **Application URL:** http://13.200.119.187:5000
+  - **Region:** ap-south-1 (Mumbai)
+  - **Deployment Date:** October 14, 2025
+
+  **Demo Credentials:**
+  UserName: kaashvi
+  Password: kaashvi123
+  
+  **Note:** This is a DEMO application. Do not enter real personal information.
+
 ##  Table of Contents
 
 - [Project Overview](#project-overview)
