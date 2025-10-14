@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+
+{% block title %}Patients - SKS Medical Center{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-4">
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h1 class="display-5">
+                <i class="bi bi-people text-primary"></i> Patients
+            </h1>
+            <p class="text-muted">Manage all patient records</p>
+        </div>
+        <div class="col-md-4 text-end">
+            <a href="{{ url_for('new_patient') }}" class="btn btn-primary btn-lg">
+                <i class="bi bi-person-plus"></i> Add New Patient
+            </a>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <form method="GET" action="{{ url_for('patients') }}" class="row g-3">
+                        <div class="col-md-10">
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-text">
+                                    <i class="bi bi-search"></i>
+                                </span>
+                                <input type="text" 
+                                       class="form-control" 
+                                       name="search" 
+                                       placeholder="Search by name or contact number..."
+                                       value="{{ search_query }}">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-primary btn-lg w-100">
+                                Search
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">
+                        <i class="bi bi-list-ul text-primary"></i> Patient List
+                        <span class="badge bg-primary">{{ patients|length }} Total</span>
+                    </h5>
+                </div>
+                <div class="card-body p-0">
+                    {% if patients %}
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Age/Gender</th>
+                                        <th>Contact</th>
+                                        <th>Blood Group</th>
+                                        <th>Registered By</th>
+                                        <th>Date</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for patient in patients %}
+                                    <tr>
+                                        <td>
+                                            <span class="badge bg-secondary">P-{{ patient.id }}</span>
+                                        </td>
+                                        <td>
+                                            <strong>{{ patient.full_name }}</strong>
+                                            {% if patient.email %}
+                                                <br><small class="text-muted">
+                                                    <i class="bi bi-envelope"></i> {{ patient.email }}
+                                                </small>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            {{ patient.age }} years<br>
+                                            <small class="text-muted">
+                                                {% if patient.gender == 'Male' %}
+                                                    <i class="bi bi-gender-male text-primary"></i>
+                                                {% elif patient.gender == 'Female' %}
+                                                    <i class="bi bi-gender-female text-danger"></i>
+                                                {% else %}
+                                                    <i class="bi bi-gender-ambiguous"></i>
+                                                {% endif %}
+                                                {{ patient.gender }}
+                                            </small>
+                                        </td>
+                                        <td>
+                                            <i class="bi bi-telephone"></i> {{ patient.contact_number }}
+                                        </td>
+                                        <td>
+                                            {% if patient.blood_group %}
+                                                <span class="badge bg-danger">{{ patient.blood_group }}</span>
+                                            {% else %}
+                                                <span class="text-muted">N/A</span>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            <small class="text-muted">
+                                                {{ patient.doctor.name if patient.doctor else 'Unknown' }}
+                                            </small>
+                                        </td>
+                                        <td>
+                                            <small class="text-muted">
+                                                {{ patient.created_at.strftime('%d %b %Y') }}
+                                            </small>
+                                        </td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm" role="group">
+                                                <a href="{{ url_for('patient_detail', patient_id=patient.id) }}" 
+                                                   class="btn btn-outline-info"
+                                                   title="View Details">
+                                                    <i class="bi bi-eye"></i>
+                                                </a>
+                                                <a href="{{ url_for('edit_patient', patient_id=patient.id) }}" 
+                                                   class="btn btn-outline-warning"
+                                                   title="Edit">
+                                                    <i class="bi bi-pencil"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <div class="text-center py-5">
+                            <i class="bi bi-inbox display-1 text-muted"></i>
+                            {% if search_query %}
+                                <p class="text-muted mt-3">
+                                    No patients found for "{{ search_query }}"
+                                </p>
+                                <a href="{{ url_for('patients') }}" class="btn btn-outline-primary">
+                                    <i class="bi bi-arrow-left"></i> Back to All Patients
+                                </a>
+                            {% else %}
+                                <p class="text-muted mt-3">No patients registered yet.</p>
+                                <a href="{{ url_for('new_patient') }}" class="btn btn-primary">
+                                    <i class="bi bi-person-plus"></i> Register First Patient
+                                </a>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

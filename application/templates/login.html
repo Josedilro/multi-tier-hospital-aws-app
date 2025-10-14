@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}Login - SKS Medical Center{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center align-items-center" style="min-height: 80vh;">
+        <div class="col-md-5">
+            <div class="card shadow-lg">
+                <div class="card-body p-5">
+                    <div class="text-center mb-4">
+                        <i class="bi bi-hospital display-1 text-primary"></i>
+                        <h2 class="mt-3">SKS Medical Center</h2>
+                        <p class="text-muted">Doctor Login Portal</p>
+                    </div>
+                    
+                    <form method="POST" action="{{ url_for('login') }}">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">
+                                <i class="bi bi-person"></i> Username
+                            </label>
+                            <input type="text" 
+                                   class="form-control form-control-lg" 
+                                   id="username" 
+                                   name="username" 
+                                   placeholder="Enter your username"
+                                   required 
+                                   autofocus>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="password" class="form-label">
+                                <i class="bi bi-lock"></i> Password
+                            </label>
+                            <input type="password" 
+                                   class="form-control form-control-lg" 
+                                   id="password" 
+                                   name="password" 
+                                   placeholder="Enter your password"
+                                   required>
+                        </div>
+                        
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="bi bi-box-arrow-in-right"></i> Login
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <hr class="my-4">
+                    
+                    <div class="text-center">
+                        <small class="text-muted">
+                            Default Credentials:<br>
+                            <strong>kaashvi</strong> / kaashvi123<br>
+                            <strong>yuvaan</strong> / yuvaan123<br>
+                            <strong>karthik</strong> / karthik123<br>
+                            <strong>omkar</strong> / omkar123
+                        </small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-3">
+                <small class="text-muted">
+                    © 2025 SKS Medical Center. All rights reserved.
+                </small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+</style>
+{% endblock %}
